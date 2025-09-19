@@ -1,0 +1,78 @@
+{
+  "title": "Contact Form",
+  "description": "A simple contact form example",
+  "layout": [
+    {
+      "fields": [
+        {
+          "type": "text",
+          "name": "name",
+          "label": "Full Name",
+          "placeholder": "Enter your full name",
+          "required": true,
+          "cols": 12,
+          "minLength": 2,
+          "maxLength": 100
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "type": "email",
+          "name": "email",
+          "label": "Email Address",
+          "placeholder": "Enter your email",
+          "required": true,
+          "cols": 12
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "type": "select",
+          "name": "subject",
+          "label": "Subject",
+          "required": true,
+          "cols": 12,
+          "options": [
+            { "value": "general", "label": "General Inquiry" },
+            { "value": "support", "label": "Technical Support" },
+            { "value": "sales", "label": "Sales Question" },
+            { "value": "feedback", "label": "Feedback" }
+          ]
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "type": "textarea",
+          "name": "message",
+          "label": "Message",
+          "placeholder": "Enter your message here...",
+          "required": true,
+          "rows": 5,
+          "maxLength": 1000,
+          "cols": 12
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "type": "checkbox",
+          "name": "newsletter",
+          "label": "Subscribe to our newsletter",
+          "cols": 12,
+          "defaultValue": false
+        }
+      ]
+    }
+  ],
+  "submitButton": {
+    "text": "Send Message",
+    "color": "primary"
+  }
+}

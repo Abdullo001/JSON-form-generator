@@ -1,0 +1,319 @@
+{
+  "title": "User Registration Form",
+  "description": "A comprehensive form demonstrating various field types and cascading selects",
+  "layout": [
+    {
+      "fields": [
+        {
+          "type": "text",
+          "name": "firstName",
+          "label": "First Name",
+          "placeholder": "Enter your first name",
+          "required": true,
+          "cols": 6,
+          "sm": 6,
+          "md": 6,
+          "lg": 6,
+          "minLength": 2,
+          "maxLength": 50
+        },
+        {
+          "type": "text",
+          "name": "lastName",
+          "label": "Last Name",
+          "placeholder": "Enter your last name",
+          "required": true,
+          "cols": 6,
+          "sm": 6,
+          "md": 6,
+          "lg": 6,
+          "minLength": 2,
+          "maxLength": 50
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "type": "email",
+          "name": "email",
+          "label": "Email Address",
+          "placeholder": "Enter your email address",
+          "required": true,
+          "cols": 12,
+          "sm": 12,
+          "md": 8,
+          "lg": 8
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "type": "date",
+          "name": "birthDate",
+          "label": "Date of Birth",
+          "required": true,
+          "cols": 6,
+          "sm": 6,
+          "md": 6,
+          "lg": 6
+        },
+        {
+          "type": "number",
+          "name": "age",
+          "label": "Age",
+          "placeholder": "Enter your age",
+          "min": 18,
+          "max": 100,
+          "cols": 6,
+          "sm": 6,
+          "md": 6,
+          "lg": 6
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "type": "select",
+          "name": "country",
+          "label": "Country",
+          "required": true,
+          "cols": 6,
+          "sm": 6,
+          "md": 6,
+          "lg": 6,
+          "options": [
+            { "value": "us", "label": "United States" },
+            { "value": "uk", "label": "United Kingdom" },
+            { "value": "ca", "label": "Canada" },
+            { "value": "au", "label": "Australia" },
+            { "value": "de", "label": "Germany" },
+            { "value": "fr", "label": "France" },
+            { "value": "jp", "label": "Japan" }
+          ]
+        },
+        {
+          "type": "select",
+          "name": "state",
+          "label": "State/Province",
+          "required": true,
+          "cols": 6,
+          "sm": 6,
+          "md": 6,
+          "lg": 6,
+          "dependsOn": {
+            "field": "country"
+          },
+          "dependencyOptions": {
+            "us": [
+              { "value": "ny", "label": "New York" },
+              { "value": "ca", "label": "California" },
+              { "value": "tx", "label": "Texas" },
+              { "value": "fl", "label": "Florida" },
+              { "value": "il", "label": "Illinois" }
+            ],
+            "uk": [
+              { "value": "england", "label": "England" },
+              { "value": "scotland", "label": "Scotland" },
+              { "value": "wales", "label": "Wales" },
+              { "value": "nireland", "label": "Northern Ireland" }
+            ],
+            "ca": [
+              { "value": "on", "label": "Ontario" },
+              { "value": "bc", "label": "British Columbia" },
+              { "value": "ab", "label": "Alberta" },
+              { "value": "qc", "label": "Quebec" }
+            ],
+            "au": [
+              { "value": "nsw", "label": "New South Wales" },
+              { "value": "vic", "label": "Victoria" },
+              { "value": "qld", "label": "Queensland" },
+              { "value": "wa", "label": "Western Australia" }
+            ],
+            "de": [
+              { "value": "bavaria", "label": "Bavaria" },
+              { "value": "bw", "label": "Baden-Württemberg" },
+              { "value": "nrw", "label": "North Rhine-Westphalia" }
+            ],
+            "fr": [
+              { "value": "idf", "label": "Île-de-France" },
+              { "value": "auvergne", "label": "Auvergne-Rhône-Alpes" },
+              { "value": "occitanie", "label": "Occitanie" }
+            ],
+            "jp": [
+              { "value": "tokyo", "label": "Tokyo" },
+              { "value": "osaka", "label": "Osaka" },
+              { "value": "kyoto", "label": "Kyoto" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "type": "select",
+          "name": "city",
+          "label": "City",
+          "required": true,
+          "cols": 6,
+          "sm": 6,
+          "md": 6,
+          "lg": 6,
+          "dependsOn": {
+            "field": "state"
+          },
+          "dependencyOptions": {
+            "ny": [
+              { "value": "newyork", "label": "New York City" },
+              { "value": "buffalo", "label": "Buffalo" },
+              { "value": "rochester", "label": "Rochester" }
+            ],
+            "ca": [
+              { "value": "losangeles", "label": "Los Angeles" },
+              { "value": "sanfrancisco", "label": "San Francisco" },
+              { "value": "sandiego", "label": "San Diego" }
+            ],
+            "tx": [
+              { "value": "houston", "label": "Houston" },
+              { "value": "dallas", "label": "Dallas" },
+              { "value": "austin", "label": "Austin" }
+            ],
+            "fl": [
+              { "value": "miami", "label": "Miami" },
+              { "value": "orlando", "label": "Orlando" },
+              { "value": "tampa", "label": "Tampa" }
+            ],
+            "il": [
+              { "value": "chicago", "label": "Chicago" },
+              { "value": "aurora", "label": "Aurora" },
+              { "value": "rockford", "label": "Rockford" }
+            ],
+            "england": [
+              { "value": "london", "label": "London" },
+              { "value": "manchester", "label": "Manchester" },
+              { "value": "birmingham", "label": "Birmingham" }
+            ],
+            "scotland": [
+              { "value": "edinburgh", "label": "Edinburgh" },
+              { "value": "glasgow", "label": "Glasgow" },
+              { "value": "aberdeen", "label": "Aberdeen" }
+            ],
+            "on": [
+              { "value": "toronto", "label": "Toronto" },
+              { "value": "ottawa", "label": "Ottawa" },
+              { "value": "hamilton", "label": "Hamilton" }
+            ],
+            "bc": [
+              { "value": "vancouver", "label": "Vancouver" },
+              { "value": "victoria", "label": "Victoria" },
+              { "value": "surrey", "label": "Surrey" }
+            ],
+            "nsw": [
+              { "value": "sydney", "label": "Sydney" },
+              { "value": "newcastle", "label": "Newcastle" },
+              { "value": "wollongong", "label": "Wollongong" }
+            ],
+            "vic": [
+              { "value": "melbourne", "label": "Melbourne" },
+              { "value": "geelong", "label": "Geelong" },
+              { "value": "ballarat", "label": "Ballarat" }
+            ],
+            "bavaria": [
+              { "value": "munich", "label": "Munich" },
+              { "value": "nuremberg", "label": "Nuremberg" },
+              { "value": "augsburg", "label": "Augsburg" }
+            ],
+            "idf": [
+              { "value": "paris", "label": "Paris" },
+              { "value": "versailles", "label": "Versailles" },
+              { "value": "boulogne", "label": "Boulogne-Billancourt" }
+            ],
+            "tokyo": [
+              { "value": "shibuya", "label": "Shibuya" },
+              { "value": "shinjuku", "label": "Shinjuku" },
+              { "value": "chiyoda", "label": "Chiyoda" }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "name": "zipCode",
+          "label": "ZIP/Postal Code",
+          "placeholder": "Enter ZIP/Postal code",
+          "required": true,
+          "cols": 6,
+          "sm": 6,
+          "md": 6,
+          "lg": 6,
+          "minLength": 3,
+          "maxLength": 10
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "type": "radio",
+          "name": "gender",
+          "label": "Gender",
+          "required": true,
+          "cols": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "options": [
+            { "value": "male", "label": "Male" },
+            { "value": "female", "label": "Female" }
+          ]
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "type": "checkbox",
+          "name": "newsletter",
+          "label": "Subscribe to newsletter",
+          "cols": 6,
+          "sm": 6,
+          "md": 6,
+          "lg": 6,
+          "defaultValue": false
+        },
+        {
+          "type": "checkbox",
+          "name": "terms",
+          "label": "I agree to the terms and conditions",
+          "required": true,
+          "cols": 6,
+          "sm": 6,
+          "md": 6,
+          "lg": 6
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "type": "textarea",
+          "name": "bio",
+          "label": "Biography",
+          "placeholder": "Tell us about yourself...",
+          "rows": 4,
+          "maxLength": 500,
+          "cols": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12
+        }
+      ]
+    }
+  ],
+  "submitButton": {
+    "text": "Register",
+    "color": "primary"
+  }
+}
